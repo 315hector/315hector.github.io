@@ -172,16 +172,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _address_form_address_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./address-form/address-form.component */ "./src/app/address-form/address-form.component.ts");
+/* harmony import */ var _authorization_authorization_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./authorization/authorization.component */ "./src/app/authorization/authorization.component.ts");
+/* harmony import */ var _table_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./table/table.component */ "./src/app/table/table.component.ts");
+/* harmony import */ var _pnp_tree_pnp_tree_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pnp-tree/pnp-tree.component */ "./src/app/pnp-tree/pnp-tree.component.ts");
 
 
 
-var routes = [];
+
+
+
+
+
+var routes = [
+    { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_3__["DashboardComponent"] },
+    { path: 'auth', component: _authorization_authorization_component__WEBPACK_IMPORTED_MODULE_5__["AuthorizationComponent"] },
+    { path: 'address', component: _address_form_address_form_component__WEBPACK_IMPORTED_MODULE_4__["AddressFormComponent"] },
+    { path: 'table', component: _table_table_component__WEBPACK_IMPORTED_MODULE_6__["TableComponent"] },
+    { path: 'tree', component: _pnp_tree_pnp_tree_component__WEBPACK_IMPORTED_MODULE_7__["PnpTreeComponent"] },
+];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { enableTracing: true })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -199,7 +215,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-menu></app-menu>\n<router-outlet></router-outlet>\n"
+module.exports = "<app-menu></app-menu>\n"
 
 /***/ }),
 
@@ -269,6 +285,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var _address_form_address_form_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./address-form/address-form.component */ "./src/app/address-form/address-form.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _authorization_authorization_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./authorization/authorization.component */ "./src/app/authorization/authorization.component.ts");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _pnp_tree_pnp_tree_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pnp-tree/pnp-tree.component */ "./src/app/pnp-tree/pnp-tree.component.ts");
+
+
+
 
 
 
@@ -292,7 +314,9 @@ var AppModule = /** @class */ (function () {
                 _menu_menu_component__WEBPACK_IMPORTED_MODULE_6__["MenuComponent"],
                 _table_table_component__WEBPACK_IMPORTED_MODULE_9__["TableComponent"],
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"],
-                _address_form_address_form_component__WEBPACK_IMPORTED_MODULE_11__["AddressFormComponent"]
+                _address_form_address_form_component__WEBPACK_IMPORTED_MODULE_11__["AddressFormComponent"],
+                _authorization_authorization_component__WEBPACK_IMPORTED_MODULE_13__["AuthorizationComponent"],
+                _pnp_tree_pnp_tree_component__WEBPACK_IMPORTED_MODULE_15__["PnpTreeComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -313,13 +337,86 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatSelectModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatRadioModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ReactiveFormsModule"]
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_14__["MatCheckboxModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ReactiveFormsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatTreeModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/authorization/authorization.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/authorization/authorization.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!--<div>-->\n  <!--<mat-grid-list>-->\n    <!--<mat-grid-tile>-->\n      <!--<mat-grid-tile-header> tile header</mat-grid-tile-header>-->\n\n      <!--<mat-grid-tile-footer> tile footer</mat-grid-tile-footer>-->\n    <!--</mat-grid-tile>-->\n  <!--</mat-grid-list>-->\n<!--</div>-->\n\n<form [formGroup]=\"authForm\" novalidate (ngSubmit)=\"onSubmit()\"  class=\"auth-card\">\n\n    <mat-card>\n      <mat-card-content>\n        <mat-form-field class=\"full-width\">\n          <input matInput placeholder=\"login\" formControlName=\"login\">\n          <mat-error *ngIf=\"authForm.controls['login'].hasError('required')\">\n            login is <strong>required</strong>\n          </mat-error>\n        </mat-form-field>\n        <mat-form-field class=\"full-width\">\n          <input matInput placeholder=\"password\" formControlName=\"pass\">\n          <mat-error *ngIf=\"authForm.controls['pass'].hasError('required')\">\n            password is <strong>required</strong>\n          </mat-error>\n        </mat-form-field>\n        <div class=\"full-width\">\n          <mat-checkbox>remember me?</mat-checkbox>\n        </div>\n      </mat-card-content>\n      <mat-card-actions>\n        <button class=\"full-width\" mat-raised-button color=\"primary\" type=\"submit\">ok</button>\n      </mat-card-actions>\n    </mat-card>\n\n</form>\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/authorization/authorization.component.scss":
+/*!************************************************************!*\
+  !*** ./src/app/authorization/authorization.component.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".auth-card {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 84px 16px 0; }\n\n.full-width {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sYW5kYS9JZGVhUHJvamVjdHMvYXNkdnIvcHJlZGljYW50L3NyYy9hcHAvYXV0aG9yaXphdGlvbi9hdXRob3JpemF0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsbUJBQW1CLEVBQUE7O0FBR3JCO0VBQ0UsV0FBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYXV0aG9yaXphdGlvbi9hdXRob3JpemF0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmF1dGgtY2FyZCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW46IDg0cHggMTZweCAwO1xufVxuXG4uZnVsbC13aWR0aCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/authorization/authorization.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/authorization/authorization.component.ts ***!
+  \**********************************************************/
+/*! exports provided: AuthorizationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthorizationComponent", function() { return AuthorizationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
+
+
+var AuthorizationComponent = /** @class */ (function () {
+    // constructor(private fb: FormBuilder, public dialog: MatDialog) { }
+    function AuthorizationComponent(fb) {
+        this.fb = fb;
+        this.authForm = this.fb.group({
+            remember: false,
+            login: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            pass: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    }
+    AuthorizationComponent.prototype.ngOnInit = function () {
+        console.log('init component AuthorizationComponent');
+    };
+    AuthorizationComponent.prototype.onSubmit = function () {
+        // alert('Thanks!');
+        alert('Извините сервис временно недоступен!');
+        console.log(_angular_core__WEBPACK_IMPORTED_MODULE_1__["VERSION"]);
+    };
+    AuthorizationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-authorization',
+            template: __webpack_require__(/*! ./authorization.component.html */ "./src/app/authorization/authorization.component.html"),
+            styles: [__webpack_require__(/*! ./authorization.component.scss */ "./src/app/authorization/authorization.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
+    ], AuthorizationComponent);
+    return AuthorizationComponent;
 }());
 
 
@@ -410,7 +507,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  width: 200px;\n}\n\n.sidenav .mat-toolbar {\n  background: inherit;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx3QkFBZ0I7RUFBaEIsZ0JBQWdCO0VBQ2hCLE1BQU07RUFDTixVQUFVO0FBQ1oiLCJmaWxlIjoic3JjL2FwcC9tZW51L21lbnUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaWRlbmF2LWNvbnRhaW5lciB7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLnNpZGVuYXYge1xuICB3aWR0aDogMjAwcHg7XG59XG5cbi5zaWRlbmF2IC5tYXQtdG9vbGJhciB7XG4gIGJhY2tncm91bmQ6IGluaGVyaXQ7XG59XG5cbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XG4gIHBvc2l0aW9uOiBzdGlja3k7XG4gIHRvcDogMDtcbiAgei1pbmRleDogMTtcbn1cbiJdfQ== */"
+module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  width: 200px;\n}\n\n.sidenav .mat-toolbar {\n  background: inherit;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n.title {\n  width: 100%;\n}\n\n/*#preference {*/\n\n/*right: 0;*/\n\n/*}*/\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS9tZW51LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx3QkFBZ0I7RUFBaEIsZ0JBQWdCO0VBQ2hCLE1BQU07RUFDTixVQUFVO0FBQ1o7O0FBQ0E7RUFDRSxXQUFXO0FBQ2I7O0FBRUEsZ0JBQWdCOztBQUNkLFlBQVk7O0FBQ2QsSUFBSSIsImZpbGUiOiJzcmMvYXBwL21lbnUvbWVudS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpZGVuYXYtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uc2lkZW5hdiB7XG4gIHdpZHRoOiAyMDBweDtcbn1cblxuLnNpZGVuYXYgLm1hdC10b29sYmFyIHtcbiAgYmFja2dyb3VuZDogaW5oZXJpdDtcbn1cblxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xufVxuLnRpdGxlIHtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi8qI3ByZWZlcmVuY2UgeyovXG4gIC8qcmlnaHQ6IDA7Ki9cbi8qfSovXG4iXX0= */"
 
 /***/ }),
 
@@ -421,7 +518,7 @@ module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  widt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n      [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n      [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n      [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar>Menu</mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item href=\"#\">Link 1</a>\n      <a mat-list-item href=\"#\">Link 2</a>\n      <a mat-list-item href=\"#\">Link 3</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\">\n      <button\n        type=\"button\"\n        aria-label=\"Toggle sidenav\"\n        mat-icon-button\n        (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>test stand</span>\n    </mat-toolbar>\n    <!-- Add Content Here -->\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n      [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n      [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n      [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar>Menu</mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item href=\"#\">home</a>\n      <a mat-list-item href=\"dashboard\">dashboard</a>\n      <a mat-list-item href=\"address\">address</a>\n      <a mat-list-item href=\"table\">table</a>\n      <a mat-list-item href=\"tree\">tree</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\">\n      <button\n        type=\"button\"\n        aria-label=\"Toggle sidenav\"\n        mat-icon-button\n        (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n\n      <span class=\"title\">test stand</span>\n\n      <div id=\"preference\">\n\n        <button mat-icon-button [matMenuTriggerFor]=\"preference\">\n          <mat-icon>more_vert</mat-icon>\n        </button>\n\n        <mat-menu #preference >\n          <button mat-menu-item>sign in</button>\n          <button mat-menu-item>sign up</button>\n          <!--<button mat-menu-item>exit</button>-->\n        </mat-menu>\n      </div>\n\n    </mat-toolbar>\n    <div id=\"\">\n      <router-outlet></router-outlet>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -446,6 +543,7 @@ __webpack_require__.r(__webpack_exports__);
 var MenuComponent = /** @class */ (function () {
     function MenuComponent(breakpointObserver) {
         this.breakpointObserver = breakpointObserver;
+        // TODO: прописать resoulution для rowHeight Ratio
         this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["Breakpoints"].Handset)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (result) { return result.matches; }));
     }
@@ -458,6 +556,158 @@ var MenuComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"]])
     ], MenuComponent);
     return MenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pnp-tree/example-data.ts":
+/*!******************************************!*\
+  !*** ./src/app/pnp-tree/example-data.ts ***!
+  \******************************************/
+/*! exports provided: files */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "files", function() { return files; });
+/** Example file/folder data. */
+var files = [
+    {
+        name: 'material2',
+        type: 'folder',
+        children: [
+            {
+                name: 'src',
+                type: 'folder',
+                children: [
+                    {
+                        name: 'cdk',
+                        type: 'folder',
+                        children: [
+                            { name: 'package.json', type: 'file' },
+                            { name: 'BUILD.bazel', type: 'file' },
+                        ]
+                    },
+                    { name: 'lib', type: 'folder' }
+                ]
+            }
+        ]
+    },
+    {
+        name: 'angular',
+        type: 'folder',
+        children: [
+            {
+                name: 'packages',
+                type: 'folder',
+                children: [
+                    { name: '.travis.yml', type: 'file' },
+                    { name: 'firebase.json', type: 'file' }
+                ]
+            },
+            { name: 'package.json', type: 'file' }
+        ]
+    },
+    {
+        name: 'angularjs',
+        type: 'folder',
+        children: [
+            { name: 'gulpfile.js', type: 'file' },
+            { name: 'README.md', type: 'file' }
+        ]
+    }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/pnp-tree/pnp-tree.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/pnp-tree/pnp-tree.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".type-icon {\n  color: #757575;\n  margin-right: 5px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcG5wLXRyZWUvcG5wLXRyZWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWM7RUFDZCxpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9wbnAtdHJlZS9wbnAtdHJlZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnR5cGUtaWNvbiB7XG4gIGNvbG9yOiAjNzU3NTc1O1xuICBtYXJnaW4tcmlnaHQ6IDVweDtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/pnp-tree/pnp-tree.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/pnp-tree/pnp-tree.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    <mat-icon class=\"type-icon\" [attr.aria-label]=\"node.type + 'icon'\">\n      {{ node.type === 'file' ? 'description' : 'folder' }}\n    </mat-icon>\n    {{node.name}}\n  </mat-tree-node>\n\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    <mat-icon class=\"type-icon\" [attr.aria-label]=\"node.type + 'icon'\">\n      {{ node.type ==='file' ? 'description' : 'folder' }}\n    </mat-icon>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n"
+
+/***/ }),
+
+/***/ "./src/app/pnp-tree/pnp-tree.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/pnp-tree/pnp-tree.component.ts ***!
+  \************************************************/
+/*! exports provided: PnpTreeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PnpTreeComponent", function() { return PnpTreeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material_tree__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/tree */ "./node_modules/@angular/material/esm5/tree.es5.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_cdk_tree__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/tree */ "./node_modules/@angular/cdk/esm5/tree.es5.js");
+/* harmony import */ var _example_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./example-data */ "./src/app/pnp-tree/example-data.ts");
+
+
+
+
+
+
+var PnpTreeComponent = /** @class */ (function () {
+    function PnpTreeComponent() {
+        this.treeFlattener = new _angular_material_tree__WEBPACK_IMPORTED_MODULE_2__["MatTreeFlattener"](this.transformer, this.getLevel, this.isExpandable, this.getChildren);
+        this.treeControl = new _angular_cdk_tree__WEBPACK_IMPORTED_MODULE_4__["FlatTreeControl"](this.getLevel, this.isExpandable);
+        this.dataSource = new _angular_material_tree__WEBPACK_IMPORTED_MODULE_2__["MatTreeFlatDataSource"](this.treeControl, this.treeFlattener);
+        this.dataSource.data = _example_data__WEBPACK_IMPORTED_MODULE_5__["files"];
+    }
+    /** Transform the data to something the tree can read. */
+    PnpTreeComponent.prototype.transformer = function (node, level) {
+        return {
+            name: node.name,
+            type: node.type,
+            level: level,
+            expandable: !!node.children
+        };
+    };
+    /** Get the level of the node */
+    PnpTreeComponent.prototype.getLevel = function (node) {
+        return node.level;
+    };
+    /** Get whether the node is expanded or not. */
+    PnpTreeComponent.prototype.isExpandable = function (node) {
+        return node.expandable;
+    };
+    /** Get whether the node has children or not. */
+    PnpTreeComponent.prototype.hasChild = function (index, node) {
+        return node.expandable;
+    };
+    /** Get the children for the node. */
+    PnpTreeComponent.prototype.getChildren = function (node) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(node.children);
+    };
+    PnpTreeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-pnp-tree',
+            template: __webpack_require__(/*! ./pnp-tree.component.html */ "./src/app/pnp-tree/pnp-tree.component.html"),
+            styles: [__webpack_require__(/*! ./pnp-tree.component.css */ "./src/app/pnp-tree/pnp-tree.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PnpTreeComponent);
+    return PnpTreeComponent;
 }());
 
 
@@ -715,7 +965,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/landa/PhpstormProjects/predicant/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/landa/IdeaProjects/asdvr/predicant/src/main.ts */"./src/main.ts");
 
 
 /***/ })
